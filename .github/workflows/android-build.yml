@@ -15,14 +15,17 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install Flet
-        run: pip install flet flet-cli
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flet flet-build
 
       - name: Build Android APK
-        run: flet build apk
+        run: flet build android
 
-      - name: Upload Release APK
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: TaskManager-release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          name: TaskManager-android
+          path: dist/*.apk
+          if-no-files-found: error

@@ -1,0 +1,9 @@
+[app]
+name = "TaskManager"
+version = "1.0.0"
+description = "مدیریت کارها"
+org = "MoriZoki"
+
+[android]
+package_name = "com.morizoki.taskmanager"
+version_code = 1
