@@ -2,13 +2,11 @@
 name = "TaskManager"
 version = "1.0.0"
 description = "مدیریت کارها"
-org = "MoriZoki"
-build-number = "1"
+executable-name = "taskmanager"
+copyright = "Copyright (c) 2025 MoriZoki"
+icon = "assets/icon.png"
 
 [android]
 package-name = "com.morizoki.taskmanager"
 version-code = 1
-key-store-path = ""
-key-alias = ""
-key-password = ""
-store-password = ""
+permissions = ["android.permission.INTERNET"]
